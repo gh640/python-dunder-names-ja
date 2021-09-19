@@ -1,3 +1,5 @@
+![Python のダンダーな名前まとめ](./assets/python-dunder-names.png)
+
 # Python のダンダーな名前まとめ
 
 Python には `__init__()` のように「先頭と末尾がアンダースコア 2 つ（ `__` ）」で「特別な意味を持つもの」があります。
