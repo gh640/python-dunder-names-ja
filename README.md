@@ -661,3 +661,35 @@ Tokens.__mro__  # => (Tokens, NewList, object)
 そのオブジェクトが所属するクラス。
 
 参考: [Special Attributes | Built-in Types — Python 3 documentation](https://docs.python.org/3/library/stdtypes.html#special-attributes)
+
+### `__sizeof__`
+
+オブジェクトのメモリ消費量を調べる `sys.getsizeof(object)` の実装として使用される。
+
+参考: [`sys.getsizeof()` | `sys` — System-specific parameters and functions — Python 3 documentation](https://docs.python.org/3/library/sys.html#sys.getsizeof)
+
+## 組み込み定数
+
+### `__debug__`
+
+`python` コマンドがオプション `-O` を付けて実行された場合は `True` 、その他の場合は `False` 。
+環境変数 `PYTHONOPTIMIZE` でも `-O` と同様の制御ができる。
+
+参考: 
+
+- [`__debug__` | Built-in Constants — Python 3 documentation](https://docs.python.org/3/library/constants.html#__debug__)
+- [`-O` | 1. Command line and environment — Python 3 documentation](https://docs.python.org/3/using/cmdline.html#cmdoption-o)
+
+## 組み込み関数
+
+### `__import__()`
+
+`import` 文が使われたときに呼び出される。
+
+実体は `importlib.__import__()` 。
+`__import__()` の使用は非推奨で、モジュールの動的なインポートには `importlib.import_module()` を使うことが推奨されている。
+
+参考: 
+
+- [`__import__()` | Built-in Functions — Python 3 documentation](https://docs.python.org/3/library/functions.html#__import__)
+- [`importlib.__import__()` | importlib — The implementation of import — Python 3.9.7 documentation](https://docs.python.org/3/library/importlib.html#importlib.__import__)
