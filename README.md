@@ -23,6 +23,7 @@ Python には `__init__()` のように「先頭と末尾がアンダースコ�
 - [オブジェクト](#オブジェクト)
 - [組み込み定数](#組み込み定数)
 - [組み込み関数](#組み込み関数)
+- [参考](#参考)
 
 ## 間違いを見つけたら
 
@@ -752,3 +753,12 @@ Tokens.__mro__  # => (Tokens, NewList, object)
 
 - [`__import__()` | Built-in Functions — Python 3 documentation](https://docs.python.org/3/library/functions.html#__import__)
 - [`importlib.__import__()` | importlib — The implementation of import — Python 3.9.7 documentation](https://docs.python.org/3/library/importlib.html#importlib.__import__)
+
+## 参考
+
+公式ドキュメントでダンダーアトリビュートやダンダーメソッドによく言及しているページ:
+
+- [3. Data model — Python 3 documentation](https://docs.python.org/3/reference/datamodel.html)
+- [Built-in Functions — Python 3 documentation](https://docs.python.org/3/library/functions.html)
+- [Type Objects — Python 3 documentation](https://docs.python.org/3/c-api/typeobj.html)
+- [6. Modules — Python 3 documentation](https://docs.python.org/3/tutorial/modules.html)
