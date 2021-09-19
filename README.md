@@ -590,7 +590,7 @@ Python 3.5 で追加された比較的新しいもの。
 
 標準ライブラリ `pickle` によるオブジェクトの保存・復元に使用される。
 
-参考: [pickle — Python object serialization — Python 3.9.7 documentation](https://docs.python.org/3/library/pickle.html#pickling-class-instances)
+参考: [pickle — Python object serialization — Python 3 documentation](https://docs.python.org/3/library/pickle.html#pickling-class-instances)
 
 ### `__subclasses__()`
 
@@ -754,7 +754,7 @@ Tokens.__mro__  # => (Tokens, NewList, object)
 参考: 
 
 - [`__import__()` | Built-in Functions — Python 3 documentation](https://docs.python.org/3/library/functions.html#__import__)
-- [`importlib.__import__()` | importlib — The implementation of import — Python 3.9.7 documentation](https://docs.python.org/3/library/importlib.html#importlib.__import__)
+- [`importlib.__import__()` | importlib — The implementation of import — Python 3 documentation](https://docs.python.org/3/library/importlib.html#importlib.__import__)
 
 ## 参考
 
