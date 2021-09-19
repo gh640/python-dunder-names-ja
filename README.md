@@ -734,7 +734,7 @@ Tokens.__mro__  # => (Tokens, NewList, object)
 
 ### `__debug__`
 
-`python` コマンドがオプション `-O` を付けて実行された場合は `True` 、その他の場合は `False` 。
+`python` コマンドがオプション `-O` を付けて実行された場合は `False` 、その他の場合は `True` 。
 環境変数 `PYTHONOPTIMIZE` でも `-O` と同様の制御ができる。
 
 参考: 
