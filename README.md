@@ -59,36 +59,6 @@ Python には `__init__()` のように「先頭と末尾がアンダースコ�
 
 > To speed up loading modules, Python caches the compiled version of each module in the `__pycache__` directory under the name `module.version.pyc`, where the version encodes the format of the compiled file; it generally contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would be cached as `__pycache__/spam.cpython-33.pyc`. This naming convention allows compiled modules from different releases and different versions of Python to coexist.
 
-### `sys.__stdin__` `sys.__stdout__` `sys.__stderr__`
-
-差し替え可能な標準入力・標準出力・標準エラーのオリジナルの値を保持する。
-
-| アトリビュート | フック関数 |
-| --- | --- |
-| `sys.__stdin__` | `sys.stdin` |
-| `sys.__stdout__` | `sys.stdout` |
-| `sys.__stderr__` | `sys.stderr` |
-
-### `sys.__breakpointhook__` `sys.__displayhook__` `sys.__excepthook__` `sys.__unraisablehook__`
-
-差し替え可能なフック関数のオリジナルの実装を保持する。
-差し替え後に元に戻したいときに利用できる。
-
-| アトリビュート | フック関数 |
-| --- | --- |
-| `sys.__breakpointhook__` | `sys.breakpointhook()` |
-| `sys.__displayhook__` | `sys.displayhook()` |
-| `sys.__excepthook__` | `sys.excepthook()` |
-| `sys.__unraisablehook__` | `sys.unraisablehook()` |
-
-参考: [`sys.__breakpointhook__` | sys — System-specific parameters and functions — Python 3 documentation](https://docs.python.org/3/library/sys.html#sys.__breakpointhook__)
-
-### `sys.__interactivehook__`
-
-定義された場合、 Python インタプリタがインタラクティブモードで起動するときに呼び出される。
-
-参考: [`sys.__interactivehook__` | sys — System-specific parameters and functions — Python 3 documentation](https://docs.python.org/3/library/sys.html#sys.__interactivehook__)
-
 ## ファイル名
 
 ### `__init__.py`
@@ -125,6 +95,36 @@ from __future__ import annotations
 > - To avoid confusing existing tools that analyze import statements and expect to find the modules they’re importing.
 > - To ensure that future statements run under releases prior to 2.1 at least yield runtime exceptions (the import of `__future__` will fail, because there was no module of that name prior to 2.1).
 > - To document when incompatible changes were introduced, and when they will be — or were — made mandatory. This is a form of executable documentation, and can be inspected programmatically via importing `__future__` and examining its contents.
+
+### `sys.__stdin__` `sys.__stdout__` `sys.__stderr__`
+
+差し替え可能な標準入力・標準出力・標準エラーのオリジナルの値を保持する。
+
+| アトリビュート | フック関数 |
+| --- | --- |
+| `sys.__stdin__` | `sys.stdin` |
+| `sys.__stdout__` | `sys.stdout` |
+| `sys.__stderr__` | `sys.stderr` |
+
+### `sys.__breakpointhook__` `sys.__displayhook__` `sys.__excepthook__` `sys.__unraisablehook__`
+
+差し替え可能なフック関数のオリジナルの実装を保持する。
+差し替え後に元に戻したいときに利用できる。
+
+| アトリビュート | フック関数 |
+| --- | --- |
+| `sys.__breakpointhook__` | `sys.breakpointhook()` |
+| `sys.__displayhook__` | `sys.displayhook()` |
+| `sys.__excepthook__` | `sys.excepthook()` |
+| `sys.__unraisablehook__` | `sys.unraisablehook()` |
+
+参考: [`sys.__breakpointhook__` | sys — System-specific parameters and functions — Python 3 documentation](https://docs.python.org/3/library/sys.html#sys.__breakpointhook__)
+
+### `sys.__interactivehook__`
+
+定義された場合、 Python インタプリタがインタラクティブモードで起動するときに呼び出される。
+
+参考: [`sys.__interactivehook__` | sys — System-specific parameters and functions — Python 3 documentation](https://docs.python.org/3/library/sys.html#sys.__interactivehook__)
 
 ## モジュール内トップレベル
 
