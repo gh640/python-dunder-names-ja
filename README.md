@@ -661,7 +661,7 @@ Tokens.__mro__  # => (Tokens, NewList, object)
 | --- | --- | --- |
 | `__bases__` | `tuple` | ベースクラス |
 | `__mro__` | `tuple` | メソッド呼び出しが行われたときの実装探索先クラス |
-| `__doc__` | `str | None` | クラスのドキュメンテーション文字列 |
+| `__doc__` | `str \| None` | クラスのドキュメンテーション文字列 |
 | `__name__` | `str` | クラス名 |
 | `__qualname__` | `str` | クラスの qualified name |
 | `__dict__` | `mappingproxy` | アトリビュートの保持用のスペース |
@@ -675,17 +675,17 @@ Tokens.__mro__  # => (Tokens, NewList, object)
 
 | 名前 | 型 | 意味 |
 | --- | --- | --- |
-| `__doc__`  | `str | None` | 関数のドキュメンテーション文字列 |
+| `__doc__`  | `str \| None` | 関数のドキュメンテーション文字列 |
 | `__name__`  | `str` | 関数の名前 |
 | `__qualname__`  | `str` | 関数の qualified name |
 | `__module__`  | `str` | 定義されたモジュール名 |
-| `__defaults__`  | `tuple | None` | 引数のデフォルト値 |
+| `__defaults__`  | `tuple \| None` | 引数のデフォルト値 |
 | `__code__`  | `code` | コンパイルされた関数のボディ |
 | `__globals__` | `dict` | グローバル変数への参照 |
 | `__dict__` | `dict` | アトリビュート保持用のスペース |
-| `__closure__` | `tuple | None` | 自由変数に対する bindings のセル |
+| `__closure__` | `tuple \| None` | 自由変数に対する bindings のセル |
 | `__annotations__`  | `dict` | 引数のアノテーション |
-| `__kwdefaults__` | `dict | None` | キーワード引数のデフォルト値 |
+| `__kwdefaults__` | `dict \| None` | キーワード引数のデフォルト値 |
 
 ## メソッド
 
