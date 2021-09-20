@@ -669,7 +669,7 @@ Tokens.__mro__  # => (Tokens, NewList, object)
 
 ## 関数
 
-### `__doc__` `__name__`  `__qualname__` `__module__` `__defaults__` `__code__` `__globals__` `__dict__` `__closure__` `__annotations__` `__kwdefaults__`
+### `__doc__` `__name__` `__qualname__` `__module__` `__defaults__` `__code__` `__globals__` `__dict__` `__closure__` `__annotations__` `__kwdefaults__`
 
 `def` キーワードを使って定義された関数（「ユーザー定義関数」）に自動的に追加されるアトリビュート。
 
