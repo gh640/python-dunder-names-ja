@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
 > A module is a file containing Python definitions and statements. The file name is the module name with the suffix `.py` appended. Within a module, the module’s name (as a string) is available as the value of the global variable `__name__`. For instance, use your favorite text editor to create a file called `fibo.py` in the current directory with the following contents:
 
-参考: https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts
+参考: [Executing modules as scripts | 6. Modules — Python 3 documentation](https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts)
 
 > the code in the module will be executed, just as if you imported it, but with the `__name__` set to `"__main__"`. That means that by adding this code at the end of your module:
 
