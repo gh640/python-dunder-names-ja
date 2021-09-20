@@ -57,8 +57,6 @@ Python には `__init__()` のように「先頭と末尾がアンダースコ�
 
 参考: [“Compiled” Python files | 6. Modules — Python 3 documentation](https://docs.python.org/3/tutorial/modules.html#compiled-python-files)
 
-> To speed up loading modules, Python caches the compiled version of each module in the `__pycache__` directory under the name `module.version.pyc`, where the version encodes the format of the compiled file; it generally contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would be cached as `__pycache__/spam.cpython-33.pyc`. This naming convention allows compiled modules from different releases and different versions of Python to coexist.
-
 ## ファイル名
 
 ### `__init__.py`
@@ -67,8 +65,6 @@ Python には `__init__()` のように「先頭と末尾がアンダースコ�
 中にコードを書くとパッケージの初期化処理として実行される。
 
 参考: [Packages | 6. Modules — Python 3 documentation](https://docs.python.org/3/tutorial/modules.html#packages)
-
-> The `__init__.py` files are required to make Python treat directories containing the file as packages. This prevents directories with a common name, such as `string`, unintentionally hiding valid modules that occur later on the module search path. In the simplest case, `__init__.py` can just be an empty file, but it can also execute initialization code for the package or set the `__all__` variable, described later.
 
 ### `__main__.py`
 
@@ -89,12 +85,6 @@ from __future__ import annotations
 ```
 
 参考: [`__future__` — Future statement definitions — Python 3 documentation](https://docs.python.org/3/library/__future__.html)
-
->`__future__` is a real module, and serves three purposes:
-> 
-> - To avoid confusing existing tools that analyze import statements and expect to find the modules they’re importing.
-> - To ensure that future statements run under releases prior to 2.1 at least yield runtime exceptions (the import of `__future__` will fail, because there was no module of that name prior to 2.1).
-> - To document when incompatible changes were introduced, and when they will be — or were — made mandatory. This is a form of executable documentation, and can be inspected programmatically via importing `__future__` and examining its contents.
 
 ### `sys.__stdin__` `sys.__stdout__` `sys.__stderr__`
 
@@ -148,13 +138,10 @@ if __name__ == "__main__":
     myfunc(sys.argv)
 ```
 
-参考: [6. Modules — Python 3 documentation](https://docs.python.org/3/tutorial/modules.html#modules)
+参考: 
 
-> A module is a file containing Python definitions and statements. The file name is the module name with the suffix `.py` appended. Within a module, the module’s name (as a string) is available as the value of the global variable `__name__`. For instance, use your favorite text editor to create a file called `fibo.py` in the current directory with the following contents:
-
-参考: [Executing modules as scripts | 6. Modules — Python 3 documentation](https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts)
-
-> the code in the module will be executed, just as if you imported it, but with the `__name__` set to `"__main__"`. That means that by adding this code at the end of your module:
+- [6. Modules — Python 3 documentation](https://docs.python.org/3/tutorial/modules.html#modules)
+- [Executing modules as scripts | 6. Modules — Python 3 documentation](https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts)
 
 その他記事:
 
@@ -167,8 +154,6 @@ if __name__ == "__main__":
 モジュールによっては（ C 言語で書かれたモジュール等では） `__file__` が存在しないこともある。
 
 参考: [`__file__` | PEP 3147 -- PYC Repository Directories | Python.org](https://www.python.org/dev/peps/pep-3147/#file)
-
-> In Python 3, when you import a module, its `__file__` attribute points to its source py file (in Python 2, it points to the pyc file). A package's `__file__` points to the py file for its `__init__.py`.
 
 ### `__cached__`
 
